@@ -1,0 +1,10 @@
+{
+    "name": "file-type-converter/backend",
+    "authors": [
+        {
+            "name": "nihad1213",
+            "email": "nihad.nemetli@gmail.com"
+        }
+    ],
+    "require": {}
+}
