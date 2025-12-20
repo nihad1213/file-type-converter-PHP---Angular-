@@ -3,10 +3,12 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use App\Controller\AudioTypeConverterController;
+use App\Controller\HomeController;
 use Src\Router;
 
 $router = new Router();
 
+$router->get("/", [HomeController::class, 'home']);
 
 // Audio Types
 $router->post("/flac-to-mp3", [AudioTypeConverterController::class, 'flacToMp3']);
