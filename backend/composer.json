@@ -12,5 +12,7 @@
             "Src\\": "Src/"
         }
     },
-    "require": {}
+    "require": {
+        "phpoffice/phpword": "^1.4"
+    }
 }
