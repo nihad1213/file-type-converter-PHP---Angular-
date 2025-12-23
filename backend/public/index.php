@@ -51,4 +51,9 @@ $router->post('api/v1/image/png-to-gif', [
     'pngToGif'
 ]);
 
+$router->post('api/v1/image/png-to-jpeg', [
+    ImageTypeConverterController::class,
+    'pngToJpeg'
+]);
+
 $router->dispatch();
