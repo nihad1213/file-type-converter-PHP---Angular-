@@ -31,4 +31,9 @@ $router->post('api/v1/image/jpeg-to-jpg', [
     'jpegTpJpg'
 ]);
 
+$router->post('api/v1/image/jpeg-to-png', [
+    ImageTypeConverterController::class,
+    'jpegToPng'
+]);
+
 $router->dispatch();
