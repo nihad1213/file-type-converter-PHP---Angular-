@@ -36,4 +36,9 @@ $router->post('api/v1/image/jpeg-to-png', [
     'jpegToPng'
 ]);
 
+$router->post('api/v1/image/jpeg-to-webp', [
+    ImageTypeConverterController::class,
+    'jpegToWebp'
+]);
+
 $router->dispatch();
