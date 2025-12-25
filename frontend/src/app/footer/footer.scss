@@ -1,7 +1,7 @@
 @use '../../styles.scss' as *;
 
-header {
-    margin-bottom: 20px;
+footer {
+    margin-top: 20px;
     background: linear-gradient(
         135deg,
         $color7 0%,
@@ -11,17 +11,21 @@ header {
     color: $color1;
     padding: 28px 20px;
     text-align: center;
-    border-bottom: 3px solid $color1;
+    border-top: 3px solid $color1;
 }
 
-header h1 {
+footer h1 {
     margin: 0;
     font-size: 28px;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
-header h1 span {
+footer p {
+    color: $color4;
+}
+
+footer h1 span {
     color: $color4;
     font-weight: 400;
 }
