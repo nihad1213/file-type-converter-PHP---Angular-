@@ -1,0 +1,26 @@
+@use '../../styles.scss' as *;
+
+header {
+    background: linear-gradient(
+        135deg,
+        $color7 0%,
+        $color6 50%,
+        $color8 100%
+    );
+    color: $color1;
+    padding: 28px 20px;
+    text-align: center;
+    border-bottom: 3px solid $color1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+header h1 span {
+    color: $color4;
+    font-weight: 400;
+}
