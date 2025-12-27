@@ -11,7 +11,7 @@ export class ConverterService {
 
   convert(file: File, endpoint: string) {
     const formData = new FormData();
-    formData.append('image', file);
+    formData.append('file', file);
     return this.http.post(`${this.baseUrl}${endpoint}`, formData);
   }
 }
