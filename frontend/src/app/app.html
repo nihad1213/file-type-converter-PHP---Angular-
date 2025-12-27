@@ -1,49 +1,215 @@
 <app-header />
-<main>
-    <div class="upload-container">
-        <div class="upload-card">
-            <h2 class="title">X to Y</h2>
-            <p class="subtitle">Convert X files to Y </p>
-            <label class="upload-box">
-            <input type="file" accept=".X" />
-            <div class="upload-content">
-                <span class="icon">⬆</span>
-                <span class="text">Click or drag a file here</span>
-                <span class="hint">Supported format: X</span>
-            </div>
-            </label>
-            <button class="upload-btn">Convert to Y</button>  
-        </div>
 
-        <div class="upload-card">
-            <h2 class="title">X to Y</h2>
-            <p class="subtitle">Convert X files to Y </p>
-            <label class="upload-box">
-            <input type="file" accept=".X" />
-            <div class="upload-content">
-                <span class="icon">⬆</span>
-                <span class="text">Click or drag a file here</span>
-                <span class="hint">Supported format: X</span>
-            </div>
-            </label>
-            <button class="upload-btn">Convert to Y</button>  
-        </div>
+<div class="upload-container">
+  <div class="upload-card">
+    <h2 class="title">BMP to JPEG</h2>
+    <p class="subtitle">Convert BMP files to JPEG</p>
+    <label class="upload-box">
+      <input type="file" accept=".bmp" (change)="onFileChange($event, 'bmp-to-jpeg')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: BMP</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertBmpToJpeg()">Convert to JPEG</button>
+  </div>
 
-        <div class="upload-card">
-            <h2 class="title">X to Y</h2>
-            <p class="subtitle">Convert X files to Y </p>
-            <label class="upload-box">
-            <input type="file" accept=".X" />
-            <div class="upload-content">
-                <span class="icon">⬆</span>
-                <span class="text">Click or drag a file here</span>
-                <span class="hint">Supported format: X</span>
-            </div>
-            </label>
-            <button class="upload-btn">Convert to Y</button>  
-        </div>
-        
+  <div class="upload-card">
+    <h2 class="title">GIF to PNG</h2>
+    <p class="subtitle">Convert GIF files to PNG</p>
+    <label class="upload-box">
+      <input type="file" accept=".gif" (change)="onFileChange($event, 'gif-to-png')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: GIF</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertGifToPng()">Convert to PNG</button>
+  </div>
 
-    </div>
-</main>
+  <div class="upload-card">
+    <h2 class="title">JPEG to BMP</h2>
+    <p class="subtitle">Convert JPEG files to BMP</p>
+    <label class="upload-box">
+      <input type="file" accept=".jpeg,.jpg" (change)="onFileChange($event, 'jpeg-to-bmp')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: JPEG</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertJpegToBmp()">Convert to BMP</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">JPEG to JPG</h2>
+    <p class="subtitle">Convert JPEG files to JPG</p>
+    <label class="upload-box">
+      <input type="file" accept=".jpeg" (change)="onFileChange($event, 'jpeg-to-jpg')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: JPEG</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertJpegToJpg()">Convert to JPG</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">JPEG to PNG</h2>
+    <p class="subtitle">Convert JPEG files to PNG</p>
+    <label class="upload-box">
+      <input type="file" accept=".jpeg,.jpg" (change)="onFileChange($event, 'jpeg-to-png')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: JPEG</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertJpegToPng()">Convert to PNG</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">JPEG to WebP</h2>
+    <p class="subtitle">Convert JPEG files to WebP</p>
+    <label class="upload-box">
+      <input type="file" accept=".jpeg,.jpg" (change)="onFileChange($event, 'jpeg-to-webp')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: JPEG</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertJpegToWebp()">Convert to WebP</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">JPG to JPEG</h2>
+    <p class="subtitle">Convert JPG files to JPEG</p>
+    <label class="upload-box">
+      <input type="file" accept=".jpg" (change)="onFileChange($event, 'jpg-to-jpeg')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: JPG</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertJpgToJpeg()">Convert to JPEG</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">PNG to GIF</h2>
+    <p class="subtitle">Convert PNG files to GIF</p>
+    <label class="upload-box">
+      <input type="file" accept=".png" (change)="onFileChange($event, 'png-to-gif')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: PNG</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertPngToGif()">Convert to GIF</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">PNG to JPEG</h2>
+    <p class="subtitle">Convert PNG files to JPEG</p>
+    <label class="upload-box">
+      <input type="file" accept=".png" (change)="onFileChange($event, 'png-to-jpeg')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: PNG</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertPngToJpeg()">Convert to JPEG</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">WebP to JPEG</h2>
+    <p class="subtitle">Convert WebP files to JPEG</p>
+    <label class="upload-box">
+      <input type="file" accept=".webp" (change)="onFileChange($event, 'webp-to-jpeg')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: WebP</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertWebpToJpeg()">Convert to JPEG</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">EPUB to PDF</h2>
+    <p class="subtitle">Convert EPUB files to PDF</p>
+    <label class="upload-box">
+      <input type="file" accept=".epub" (change)="onFileChange($event, 'epub-to-pdf')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: EPUB</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertEpubToPdf()">Convert to PDF</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">Excel to PDF</h2>
+    <p class="subtitle">Convert Excel files to PDF</p>
+    <label class="upload-box">
+      <input type="file" accept=".xlsx,.xls" (change)="onFileChange($event, 'excel-to-pdf')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: XLSX, XLS</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertExcelToPdf()">Convert to PDF</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">PDF to Excel</h2>
+    <p class="subtitle">Convert PDF files to Excel</p>
+    <label class="upload-box">
+      <input type="file" accept=".pdf" (change)="onFileChange($event, 'pdf-to-excel')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: PDF</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertPdfToExcel()">Convert to Excel</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">PDF to Word</h2>
+    <p class="subtitle">Convert PDF files to Word</p>
+    <label class="upload-box">
+      <input type="file" accept=".pdf" (change)="onFileChange($event, 'pdf-to-word')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: PDF</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertPdfToWord()">Convert to Word</button>
+  </div>
+
+  <div class="upload-card">
+    <h2 class="title">Word to PDF</h2>
+    <p class="subtitle">Convert Word files to PDF</p>
+    <label class="upload-box">
+      <input type="file" accept=".doc,.docx" (change)="onFileChange($event, 'word-to-pdf')" />
+      <div class="upload-content">
+        <span class="icon">⬆</span>
+        <span class="text">Click or drag a file here</span>
+        <span class="hint">Supported format: DOC, DOCX</span>
+      </div>
+    </label>
+    <button class="upload-btn" (click)="convertWordToPdf()">Convert to PDF</button>
+  </div>
+</div>
+
 <app-footer />
